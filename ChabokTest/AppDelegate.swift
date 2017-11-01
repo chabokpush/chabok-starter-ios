@@ -7,16 +7,81 @@
 //
 
 import UIKit
+import AdpPushClient
+import CoreData
+import AudioToolbox
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate , PushClientManagerDelegate {
 
     var window: UIWindow?
+    var manager: PushClientManager?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        manager = PushClientManager.default()
+        PushClientManager.setDevelopment(true)
+        manager?.registerApplication("raaceug", apiKey: "7ae5503ffb74fff750413b05e0e9dad24dd5a05b", userName: "locjopzajuk", password: "alitafutuc")
+        manager?.addDelegate(self)
+        
+        let launchByNotification = (manager?.application(application, didFinishLaunchingWithOptions: launchOptions))!
+        if launchByNotification{
+            print("Application was launch by clicking on Notification...")
+        }
+        
+        if let userId = self.manager?.userId {
+            if !(self.manager?.registerUser(userId))! {
+                print("Error : \(String(describing: self.manager?.failureError))")
+            }
+        }
         return true
+    }
+    //MARK : Notification AppDelegation
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        self.manager?.application(application, didFailToRegisterForRemoteNotificationsWithError: error)
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        self.manager?.application(application, didRegisterForRemoteNotificationsWithDeviceToken: deviceToken)
+    }
+    
+    @available(iOS 8.0, *)
+    func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
+        self.manager?.application(application, didRegister: notificationSettings)
+    }
+    
+    //MARK : Register User
+    
+    func pushClientManagerDidRegisterUser(_ registration: Bool) {
+        print(registration)
+    }
+    
+    func pushClientManagerDidFailRegisterUser(_ error: Error!) {
+        print("It was not successful! Please try again")
+    }
+    
+    //MARK : PushClientMessage
+
+    func pushClientManagerDidReceivedMessage(_ message: PushClientMessage!) {
+        // Called When PushClientManager has been received new message from server
+        if message.senderId != self.manager?.userId {
+            AudioServicesPlayAlertSound(1009)
+        }
+    }
+    
+    //MARK : Push Notification
+
+    func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
+        self.manager?.application(application, didReceive: notification)
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        // Hook and Handle New Remote Notification, must be use for remote payloads
+        manager?.application(application, didReceiveRemoteNotification: userInfo, fetchCompletionHandler: completionHandler)
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -40,7 +105,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
 
 }
 

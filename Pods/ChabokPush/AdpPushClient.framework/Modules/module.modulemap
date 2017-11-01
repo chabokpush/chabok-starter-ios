@@ -1,0 +1,6 @@
+framework module AdpPushClient {
+  umbrella header "AdpPushClient.h"
+
+  export *
+  module * { export * }
+}

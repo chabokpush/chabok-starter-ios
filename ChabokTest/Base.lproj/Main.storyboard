@@ -1,24 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="axn-Z5-VEB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Register View Controller-->
+        <scene sceneID="iCV-aT-LOC">
+            <objects>
+                <viewController id="axn-Z5-VEB" customClass="RegisterViewController" customModule="ChabokTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WvS-vQ-FUi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="شماره همراه" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vDk-1K-dVi">
+                                <rect key="frame" x="63" y="181" width="248" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Q3e-m0-CiL"/>
+                                    <constraint firstAttribute="width" constant="248" id="Qlb-2Y-mEt"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="خوش آمدید." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FU2-sd-c71">
+                                <rect key="frame" x="111" y="72" width="153" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="U3R-OE-sol"/>
+                                    <constraint firstAttribute="width" constant="153" id="hAe-jv-VRd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYZ-kq-a2W">
+                                <rect key="frame" x="158" y="281" width="58" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="4NG-mj-ERI"/>
+                                    <constraint firstAttribute="height" constant="30" id="wEn-2m-xGb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="ثبت نام"/>
+                                <connections>
+                                    <action selector="registerBtnClick:" destination="axn-Z5-VEB" eventType="touchUpInside" id="VGw-Jw-SOF"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showView" id="W2c-WM-XYh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FU2-sd-c71" firstAttribute="centerX" secondItem="WvS-vQ-FUi" secondAttribute="centerX" id="3KF-Z6-j7r"/>
+                            <constraint firstItem="FU2-sd-c71" firstAttribute="top" secondItem="fYL-4r-69I" secondAttribute="top" constant="52" id="QTe-Ko-BHd"/>
+                            <constraint firstItem="OYZ-kq-a2W" firstAttribute="top" secondItem="vDk-1K-dVi" secondAttribute="bottom" constant="55" id="a1m-KB-4yG"/>
+                            <constraint firstItem="vDk-1K-dVi" firstAttribute="centerX" secondItem="WvS-vQ-FUi" secondAttribute="centerX" id="cqX-SI-bcy"/>
+                            <constraint firstItem="vDk-1K-dVi" firstAttribute="top" secondItem="FU2-sd-c71" secondAttribute="bottom" constant="70" id="nvv-ph-YhM"/>
+                            <constraint firstItem="OYZ-kq-a2W" firstAttribute="centerX" secondItem="WvS-vQ-FUi" secondAttribute="centerX" id="ytr-cf-LVC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fYL-4r-69I"/>
+                    </view>
+                    <connections>
+                        <outlet property="UserIdTextField" destination="vDk-1K-dVi" id="DBt-Oc-3s3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IYX-mF-NdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-698.39999999999998" y="33.733133433283363"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChabokTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xpq-nW-2A4">
+                                <rect key="frame" x="87" y="297" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="YOZ-pg-HOR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="hpo-lF-AFN">
+                                <rect key="frame" x="87" y="63" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="0XH-o1-6yE"/>
+                                    <constraint firstAttribute="width" constant="200" id="v5R-bc-Hyn"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zwM-M4-Oku">
+                                <rect key="frame" x="177" y="371" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="HAI-GF-2PF"/>
+                                    <constraint firstAttribute="height" constant="20" id="eeh-cb-HIL"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zwM-M4-Oku" firstAttribute="top" secondItem="Xpq-nW-2A4" secondAttribute="bottom" constant="34" id="Jtt-ei-TCk"/>
+                            <constraint firstItem="zwM-M4-Oku" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LJ9-bh-nri"/>
+                            <constraint firstItem="Xpq-nW-2A4" firstAttribute="top" secondItem="hpo-lF-AFN" secondAttribute="bottom" constant="34" id="N7L-gT-U0v"/>
+                            <constraint firstItem="hpo-lF-AFN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="Rp3-YU-Gtv"/>
+                            <constraint firstItem="hpo-lF-AFN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uhh-ci-2zV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xpq-nW-2A4" secondAttribute="trailing" constant="88" id="haP-F8-pSF"/>
+                            <constraint firstItem="Xpq-nW-2A4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="lk2-f5-Hk9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="connectionImage" destination="zwM-M4-Oku" id="wWG-rX-QUh"/>
+                        <outlet property="connectionLabel" destination="Xpq-nW-2A4" id="Ckh-9i-LFP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="1024" height="1024"/>
+    </resources>
 </document>

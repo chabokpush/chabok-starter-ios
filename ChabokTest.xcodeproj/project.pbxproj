@@ -7,33 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3554277F8F67092E7582AE30 /* Pods_ChabokTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C4547B2C17DE5D38160534 /* Pods_ChabokTest.framework */; };
+		C55785D61FA9B75D00930488 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55785D51FA9B75D00930488 /* RegisterViewController.swift */; };
 		C5A18E411FA89B1F005BDDF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A18E401FA89B1F005BDDF6 /* AppDelegate.swift */; };
 		C5A18E431FA89B1F005BDDF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A18E421FA89B1F005BDDF6 /* ViewController.swift */; };
 		C5A18E461FA89B1F005BDDF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A18E441FA89B1F005BDDF6 /* Main.storyboard */; };
 		C5A18E481FA89B1F005BDDF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5A18E471FA89B1F005BDDF6 /* Assets.xcassets */; };
 		C5A18E4B1FA89B1F005BDDF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A18E491FA89B1F005BDDF6 /* LaunchScreen.storyboard */; };
-		C5A18E561FA89B1F005BDDF6 /* ChabokTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A18E551FA89B1F005BDDF6 /* ChabokTestTests.swift */; };
-		C5A18E611FA89B1F005BDDF6 /* ChabokTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A18E601FA89B1F005BDDF6 /* ChabokTestUITests.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C5A18E521FA89B1F005BDDF6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C5A18E351FA89B1F005BDDF6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C5A18E3C1FA89B1F005BDDF6;
-			remoteInfo = ChabokTest;
-		};
-		C5A18E5D1FA89B1F005BDDF6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C5A18E351FA89B1F005BDDF6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C5A18E3C1FA89B1F005BDDF6;
-			remoteInfo = ChabokTest;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		0934E47427E2F366CD6763B7 /* Pods_ChabokTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChabokTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47C4547B2C17DE5D38160534 /* Pods_ChabokTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChabokTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77A832EDEF4A99C6AFA88735 /* Pods_ChabokTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChabokTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A08990CB9FA2C0C1A3A57EB0 /* Pods-ChabokTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChabokTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChabokTest/Pods-ChabokTest.release.xcconfig"; sourceTree = "<group>"; };
+		C19A004CD4BDDEA260D128C9 /* Pods-ChabokTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChabokTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChabokTest/Pods-ChabokTest.debug.xcconfig"; sourceTree = "<group>"; };
+		C55785D51FA9B75D00930488 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		C5A18E3D1FA89B1F005BDDF6 /* ChabokTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChabokTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A18E401FA89B1F005BDDF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5A18E421FA89B1F005BDDF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,12 +30,11 @@
 		C5A18E471FA89B1F005BDDF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5A18E4A1FA89B1F005BDDF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5A18E4C1FA89B1F005BDDF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C5A18E511FA89B1F005BDDF6 /* ChabokTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChabokTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A18E551FA89B1F005BDDF6 /* ChabokTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChabokTestTests.swift; sourceTree = "<group>"; };
 		C5A18E571FA89B1F005BDDF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C5A18E5C1FA89B1F005BDDF6 /* ChabokTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChabokTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A18E601FA89B1F005BDDF6 /* ChabokTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChabokTestUITests.swift; sourceTree = "<group>"; };
 		C5A18E621FA89B1F005BDDF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5A18E6E1FA8A45B005BDDF6 /* ChabokTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChabokTest.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,26 +42,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C5A18E4E1FA89B1F005BDDF6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C5A18E591FA89B1F005BDDF6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				3554277F8F67092E7582AE30 /* Pods_ChabokTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BDEF68756B18E182E96749CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47C4547B2C17DE5D38160534 /* Pods_ChabokTest.framework */,
+				0934E47427E2F366CD6763B7 /* Pods_ChabokTestTests.framework */,
+				77A832EDEF4A99C6AFA88735 /* Pods_ChabokTestUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C5A18E341FA89B1F005BDDF6 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +66,8 @@
 				C5A18E541FA89B1F005BDDF6 /* ChabokTestTests */,
 				C5A18E5F1FA89B1F005BDDF6 /* ChabokTestUITests */,
 				C5A18E3E1FA89B1F005BDDF6 /* Products */,
+				E00EDE23FAF6D4AEE7C2425F /* Pods */,
+				BDEF68756B18E182E96749CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,8 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				C5A18E3D1FA89B1F005BDDF6 /* ChabokTest.app */,
-				C5A18E511FA89B1F005BDDF6 /* ChabokTestTests.xctest */,
-				C5A18E5C1FA89B1F005BDDF6 /* ChabokTestUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +82,8 @@
 		C5A18E3F1FA89B1F005BDDF6 /* ChabokTest */ = {
 			isa = PBXGroup;
 			children = (
+				C5A18E6E1FA8A45B005BDDF6 /* ChabokTest.entitlements */,
+				C55785D51FA9B75D00930488 /* RegisterViewController.swift */,
 				C5A18E401FA89B1F005BDDF6 /* AppDelegate.swift */,
 				C5A18E421FA89B1F005BDDF6 /* ViewController.swift */,
 				C5A18E441FA89B1F005BDDF6 /* Main.storyboard */,
@@ -125,6 +112,15 @@
 			path = ChabokTestUITests;
 			sourceTree = "<group>";
 		};
+		E00EDE23FAF6D4AEE7C2425F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C19A004CD4BDDEA260D128C9 /* Pods-ChabokTest.debug.xcconfig */,
+				A08990CB9FA2C0C1A3A57EB0 /* Pods-ChabokTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +128,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5A18E651FA89B1F005BDDF6 /* Build configuration list for PBXNativeTarget "ChabokTest" */;
 			buildPhases = (
+				DEA099A561318C02400A4CE2 /* [CP] Check Pods Manifest.lock */,
 				C5A18E391FA89B1F005BDDF6 /* Sources */,
 				C5A18E3A1FA89B1F005BDDF6 /* Frameworks */,
 				C5A18E3B1FA89B1F005BDDF6 /* Resources */,
+				9401222787AB53A327479C07 /* [CP] Embed Pods Frameworks */,
+				53A50347A354484DFA74BD88 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,42 +143,6 @@
 			productName = ChabokTest;
 			productReference = C5A18E3D1FA89B1F005BDDF6 /* ChabokTest.app */;
 			productType = "com.apple.product-type.application";
-		};
-		C5A18E501FA89B1F005BDDF6 /* ChabokTestTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C5A18E681FA89B1F005BDDF6 /* Build configuration list for PBXNativeTarget "ChabokTestTests" */;
-			buildPhases = (
-				C5A18E4D1FA89B1F005BDDF6 /* Sources */,
-				C5A18E4E1FA89B1F005BDDF6 /* Frameworks */,
-				C5A18E4F1FA89B1F005BDDF6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C5A18E531FA89B1F005BDDF6 /* PBXTargetDependency */,
-			);
-			name = ChabokTestTests;
-			productName = ChabokTestTests;
-			productReference = C5A18E511FA89B1F005BDDF6 /* ChabokTestTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		C5A18E5B1FA89B1F005BDDF6 /* ChabokTestUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C5A18E6B1FA89B1F005BDDF6 /* Build configuration list for PBXNativeTarget "ChabokTestUITests" */;
-			buildPhases = (
-				C5A18E581FA89B1F005BDDF6 /* Sources */,
-				C5A18E591FA89B1F005BDDF6 /* Frameworks */,
-				C5A18E5A1FA89B1F005BDDF6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C5A18E5E1FA89B1F005BDDF6 /* PBXTargetDependency */,
-			);
-			name = ChabokTestUITests;
-			productName = ChabokTestUITests;
-			productReference = C5A18E5C1FA89B1F005BDDF6 /* ChabokTestUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -194,16 +157,14 @@
 					C5A18E3C1FA89B1F005BDDF6 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
-					};
-					C5A18E501FA89B1F005BDDF6 = {
-						CreatedOnToolsVersion = 9.0.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = C5A18E3C1FA89B1F005BDDF6;
-					};
-					C5A18E5B1FA89B1F005BDDF6 = {
-						CreatedOnToolsVersion = 9.0.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = C5A18E3C1FA89B1F005BDDF6;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -221,8 +182,6 @@
 			projectRoot = "";
 			targets = (
 				C5A18E3C1FA89B1F005BDDF6 /* ChabokTest */,
-				C5A18E501FA89B1F005BDDF6 /* ChabokTestTests */,
-				C5A18E5B1FA89B1F005BDDF6 /* ChabokTestUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,62 +197,71 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C5A18E4F1FA89B1F005BDDF6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C5A18E5A1FA89B1F005BDDF6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		53A50347A354484DFA74BD88 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChabokTest/Pods-ChabokTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9401222787AB53A327479C07 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChabokTest/Pods-ChabokTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEA099A561318C02400A4CE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChabokTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C5A18E391FA89B1F005BDDF6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C55785D61FA9B75D00930488 /* RegisterViewController.swift in Sources */,
 				C5A18E431FA89B1F005BDDF6 /* ViewController.swift in Sources */,
 				C5A18E411FA89B1F005BDDF6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C5A18E4D1FA89B1F005BDDF6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C5A18E561FA89B1F005BDDF6 /* ChabokTestTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C5A18E581FA89B1F005BDDF6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C5A18E611FA89B1F005BDDF6 /* ChabokTestUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C5A18E531FA89B1F005BDDF6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C5A18E3C1FA89B1F005BDDF6 /* ChabokTest */;
-			targetProxy = C5A18E521FA89B1F005BDDF6 /* PBXContainerItemProxy */;
-		};
-		C5A18E5E1FA89B1F005BDDF6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C5A18E3C1FA89B1F005BDDF6 /* ChabokTest */;
-			targetProxy = C5A18E5D1FA89B1F005BDDF6 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C5A18E441FA89B1F005BDDF6 /* Main.storyboard */ = {
@@ -424,13 +392,16 @@
 		};
 		C5A18E661FA89B1F005BDDF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C19A004CD4BDDEA260D128C9 /* Pods-ChabokTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ChabokTest/ChabokTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7DG439E44J;
+				DEVELOPMENT_TEAM = 99XQ6TEKDW;
 				INFOPLIST_FILE = ChabokTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adpdigital.ChabokTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adpdigital.Chabok;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -439,82 +410,19 @@
 		};
 		C5A18E671FA89B1F005BDDF6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A08990CB9FA2C0C1A3A57EB0 /* Pods-ChabokTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ChabokTest/ChabokTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7DG439E44J;
+				DEVELOPMENT_TEAM = 99XQ6TEKDW;
 				INFOPLIST_FILE = ChabokTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adpdigital.ChabokTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adpdigital.Chabok;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		C5A18E691FA89B1F005BDDF6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7DG439E44J;
-				INFOPLIST_FILE = ChabokTestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adpdigital.ChabokTestTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChabokTest.app/ChabokTest";
-			};
-			name = Debug;
-		};
-		C5A18E6A1FA89B1F005BDDF6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7DG439E44J;
-				INFOPLIST_FILE = ChabokTestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adpdigital.ChabokTestTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChabokTest.app/ChabokTest";
-			};
-			name = Release;
-		};
-		C5A18E6C1FA89B1F005BDDF6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7DG439E44J;
-				INFOPLIST_FILE = ChabokTestUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adpdigital.ChabokTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ChabokTest;
-			};
-			name = Debug;
-		};
-		C5A18E6D1FA89B1F005BDDF6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7DG439E44J;
-				INFOPLIST_FILE = ChabokTestUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adpdigital.ChabokTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ChabokTest;
 			};
 			name = Release;
 		};
@@ -535,24 +443,6 @@
 			buildConfigurations = (
 				C5A18E661FA89B1F005BDDF6 /* Debug */,
 				C5A18E671FA89B1F005BDDF6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C5A18E681FA89B1F005BDDF6 /* Build configuration list for PBXNativeTarget "ChabokTestTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C5A18E691FA89B1F005BDDF6 /* Debug */,
-				C5A18E6A1FA89B1F005BDDF6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C5A18E6B1FA89B1F005BDDF6 /* Build configuration list for PBXNativeTarget "ChabokTestUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C5A18E6C1FA89B1F005BDDF6 /* Debug */,
-				C5A18E6D1FA89B1F005BDDF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
