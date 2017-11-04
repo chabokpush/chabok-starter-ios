@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate , PushClientManagerDelegat
 
         manager = PushClientManager.default()
         PushClientManager.setDevelopment(true)
-        manager?.registerApplication("raaceug", apiKey: "7ae5503ffb74fff750413b05e0e9dad24dd5a05b", userName: "locjopzajuk", password: "alitafutuc")
+        manager?.registerApplication("APP_ID", apiKey: "API_KEY", userName: "SDK_USERNAME", password: "SDK_PASSWORD")
         manager?.addDelegate(self)
         
         let launchByNotification = (manager?.application(application, didFinishLaunchingWithOptions: launchOptions))!
