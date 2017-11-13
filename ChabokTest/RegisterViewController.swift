@@ -22,7 +22,8 @@ class RegisterViewController: UIViewController {
     }
 
     @IBAction func registerBtnClick(_ sender: UIButton) {
-        
+        self.manager = PushClientManager.default()
+
         let UserId: String = UserIdTextField.text!
         let registerUser = self.manager.registerUser(UserId)
         

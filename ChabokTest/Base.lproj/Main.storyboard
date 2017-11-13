@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="axn-Z5-VEB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="axn-Z5-VEB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,6 +14,10 @@
         <scene sceneID="iCV-aT-LOC">
             <objects>
                 <viewController id="axn-Z5-VEB" customClass="RegisterViewController" customModule="ChabokTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZJl-fa-2zc"/>
+                        <viewControllerLayoutGuide type="bottom" id="l3v-jh-HTA"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WvS-vQ-FUi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,13 +59,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FU2-sd-c71" firstAttribute="centerX" secondItem="WvS-vQ-FUi" secondAttribute="centerX" id="3KF-Z6-j7r"/>
-                            <constraint firstItem="FU2-sd-c71" firstAttribute="top" secondItem="fYL-4r-69I" secondAttribute="top" constant="52" id="QTe-Ko-BHd"/>
+                            <constraint firstItem="FU2-sd-c71" firstAttribute="top" secondItem="ZJl-fa-2zc" secondAttribute="bottom" constant="52" id="QTe-Ko-BHd"/>
                             <constraint firstItem="OYZ-kq-a2W" firstAttribute="top" secondItem="vDk-1K-dVi" secondAttribute="bottom" constant="55" id="a1m-KB-4yG"/>
                             <constraint firstItem="vDk-1K-dVi" firstAttribute="centerX" secondItem="WvS-vQ-FUi" secondAttribute="centerX" id="cqX-SI-bcy"/>
                             <constraint firstItem="vDk-1K-dVi" firstAttribute="top" secondItem="FU2-sd-c71" secondAttribute="bottom" constant="70" id="nvv-ph-YhM"/>
                             <constraint firstItem="OYZ-kq-a2W" firstAttribute="centerX" secondItem="WvS-vQ-FUi" secondAttribute="centerX" id="ytr-cf-LVC"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="fYL-4r-69I"/>
                     </view>
                     <connections>
                         <outlet property="UserIdTextField" destination="vDk-1K-dVi" id="DBt-Oc-3s3"/>
@@ -75,6 +78,10 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChabokTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z5i-9j-5Ew"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pte-pm-Y9H"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,12 +115,11 @@
                             <constraint firstItem="zwM-M4-Oku" firstAttribute="top" secondItem="Xpq-nW-2A4" secondAttribute="bottom" constant="34" id="Jtt-ei-TCk"/>
                             <constraint firstItem="zwM-M4-Oku" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LJ9-bh-nri"/>
                             <constraint firstItem="Xpq-nW-2A4" firstAttribute="top" secondItem="hpo-lF-AFN" secondAttribute="bottom" constant="34" id="N7L-gT-U0v"/>
-                            <constraint firstItem="hpo-lF-AFN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="Rp3-YU-Gtv"/>
+                            <constraint firstItem="hpo-lF-AFN" firstAttribute="top" secondItem="z5i-9j-5Ew" secondAttribute="bottom" constant="43" id="Rp3-YU-Gtv"/>
                             <constraint firstItem="hpo-lF-AFN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uhh-ci-2zV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xpq-nW-2A4" secondAttribute="trailing" constant="88" id="haP-F8-pSF"/>
-                            <constraint firstItem="Xpq-nW-2A4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="lk2-f5-Hk9"/>
+                            <constraint firstAttribute="trailing" secondItem="Xpq-nW-2A4" secondAttribute="trailing" constant="88" id="haP-F8-pSF"/>
+                            <constraint firstItem="Xpq-nW-2A4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="87" id="lk2-f5-Hk9"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="connectionImage" destination="zwM-M4-Oku" id="wWG-rX-QUh"/>
