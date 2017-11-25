@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 2. open project in your idea and sync it, then build the app to your device or simulator.
 
-3. You can login with [Testenvironment](https://sandbox.push.adpdigital.com/login) to see the starter app info in the panel. 
+3. You can login with [Test environment](https://sandbox.push.adpdigital.com/login) to see the starter app info in the panel. 
 > Please use the following account
 >
 > **Username** : `starter` 
