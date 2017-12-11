@@ -49,6 +49,10 @@ typedef NS_ENUM(NSInteger, PushClientServerConnectionState){
  * Enum for Push Client Error code 
  */
 typedef NS_ENUM(NSInteger, PushClientErrorCode) {
+    /** Error code when you are not initialized yet */
+    kPushClientNotInitializedErrorCode =-5001,
+    /** Error code when push client parameter was not valid */
+    kPushClientParameterNotValidErrorCode =-5002,
     /** Error Code for failure in registration Application*/
     kPushClientFailRegisterApplicationErrorCode = -5009,
     /** Error Code for failure in register user in server*/
@@ -64,7 +68,6 @@ typedef NS_ENUM(NSInteger, PushClientErrorCode) {
     /** Error code when device has no internet connection */
     kPushClientNoInternetConnectionErrorCode =-5030,
 };
-
 
 typedef void (^PushClientMessageHandlerBlock)(PushClientMessage *message);
 
@@ -158,7 +161,15 @@ extern NSString *const kPushClientErrorDomain;
 
 - (void)pushClientManagerDidFailInVerifyUserCode:(NSError *)error;
 
+- (void)pushClientManagerDidSubscribed:(NSString *) channel;
 
+- (void)pushClientManagerDidFailInSubscribe:(NSError *) error;
+
+- (void)pushClientManagerDidUnsubscribed:(NSString *) channel;
+
+- (void)pushClientManagerDidFailInUnsubscribe:(NSError *) error;
+
+- (void)pushClientManagerDidFailInPublish:(NSError *) error;
 
 @end
 
@@ -424,32 +435,168 @@ NS_CLASS_AVAILABLE_IOS(7_0)
 
 - (void)unregisterUser;
 
-- (NSString*)getRegistrationId;
+- (NSString*)getInstallationId;
 
+#pragma mark - subscribe methods
 
 /*!
- * @description Subscribe client to a channel
- * @param channel Can a private channel name or public/sth for a public channel
+ * @description Subscribe client to a public channel. If channel was subscribed successfully invoke pushClientManagerDidSubscribed: delegate method.
+ 
+ * @param channel is default set public, for subscribe to private channel set private/sth for a private channel
+ 
  */
 - (void)subscribe:(NSString *)channel;
 
+/*!
+ * @description Subscribe client to public channels. If channels was subscribed successfully invoke pushClientManagerDidSubscribed: delegate method.
+ 
+ * @param channels is default set public, for subscribe to private channel set private/sth for a private channel
+ 
+ */
 - (void)subscribeList:(NSArray *)channels;
 
+/*!
+ * @description Subscribe client to a public channel. If channel was subscribed successfully invoke pushClientManagerDidSubscribed: delegate method.
+ 
+ * @param channel is default set public, for subscribe to private channel set private/sth for a private channel
+ 
+ * @param live means get messages when client was connected
+ */
 - (void)subscribe:(NSString *)channel live:(BOOL)live;
 
+#pragma mark - subscribe to event
 
 /*!
- * @description Unsubscribe user from a channel
+ subscribeEvent:
+ 
+ Discussion:
+    This method subscribe to an public event
+ 
+ @param eventName is NSString.
+ */
+- (void)subscribeEvent:(NSString*)eventName;
+
+/*!
+ subscribeEvent:live
+ 
+ Discussion:
+    This method subscribe to an public event
+ 
+ @param eventName is NSString.
+ 
+ @param live is BOOL. Yes means when you receive event if you was connected.
+ */
+- (void)subscribeEvent:(NSString*)eventName live:(BOOL)live;
+
+/*!
+ subscribeEvent:installationId
+ 
+ Discussion:
+    This method subscribe to an private event
+ 
+ @param eventName is NSString.
+ 
+ @param registerationId set user installationId or DeviceId;
+ 
+ */
+- (void)subscribeEvent:(NSString*)eventName installationId:(NSString *)installationId;
+
+/*!
+ subscribeEvent:installationId:live
+ 
+ Discussion:
+    This method subscribe to an private event
+ 
+ @param eventName is NSString.
+ 
+ @param registerationId set user installationId or DeviceId;
+ 
+ @param live is BOOL. Yes means when you receive event if you was connected.
+ */
+- (void)subscribeEvent:(NSString*)eventName installationId:(NSString *)installationId live:(BOOL)live;
+
+#pragma mark - unsubscribe methods
+
+/*!
+ * @description Unsubscribe client to public channel. If channel was unsubscribed successfully invoke pushClientManagerDidUnsubscribed: delegate method.
+ 
  * @param channel Can a private channel name or public/sth for a public channel
  */
 - (void)unsubscribe:(NSString *)channel;
 
+#pragma mark - unsubscribe to event
+
+
+/*!
+ unsubscribeEvent:eventName
+ 
+ Discussion:
+ This method unsubscribe to eventname.
+ 
+ @param eventName is NSString.
+ 
+ @author AdpDigital co.
+ */
+- (void)unsubscribeEvent:(NSString *)eventName;
+
+/*!
+ unsubscribeEvent:forPublic
+ 
+ Discussion:
+ This method unsubscribe to eventname.
+ 
+ @param eventName event name.
+ 
+ @param registerationId set user installationId or DeviceId.
+ 
+ @author AdpDigital co.
+ */
+- (void)unsubscribeEvent:(NSString *)eventName installationId:(NSString *)installationId;
+
+
+#pragma mark - publish methods
+/*!
+ * @description Publish a message to a channel
+ 
+ * @param message is the PushClientMessage you want to sent out
+ */
+- (BOOL)publish:(PushClientMessage *)message;
 
 /*!
  * @description Publish a message to a channel
- * @message message is the PushClientMessage you want to sent out
+ 
+ * @param channel for publish on it
+ 
+ * @param text is message body.
+ 
  */
-- (BOOL)publishMessage:(PushClientMessage *)message;
+- (BOOL)publish:(NSString *)channel withText:(NSString *) text;
+
+/*!
+ * @description Publish a message to a channel
+ 
+ * @param userId for determine how get the message
+ 
+ * @param channel for publish on it
+ 
+ * @param text is message body.
+ 
+ */
+- (BOOL)publish:(NSString *)userId toChannel:(NSString *)channel withText:(NSString *) text;
+
+#pragma mark - publish events
+
+/*!
+ * @description Publish event with data
+ * @param eventName is the NSString to sent event with deviceId.
+ * @param data is the NSDictionary you want to sent out.
+ * @author AdpDigital co.
+ *
+ */
+- (BOOL)publishEvent:(NSString*)eventName data:(NSDictionary*)data;
+- (BOOL)publishEvent:(NSString*)eventName data:(NSDictionary*)data live:(BOOL)live;
+- (BOOL)publishEvent:(NSString*)eventName data:(NSDictionary*)data stateful:(BOOL)stateful;
+- (BOOL)publishEvent:(NSString*)eventName data:(NSDictionary*)data live:(BOOL)live stateful:(BOOL)stateful;
 
 #pragma mark - tag methods
 
@@ -505,25 +652,6 @@ NS_CLASS_AVAILABLE_IOS(7_0)
  */
 - (void) removeTag:(NSString *)name  success:(void (^)(NSInteger count))success
            failure:(void (^)(NSError *error))failure;
-
-#pragma mark - publish events
-
-/*!
- * @description Publish event with data
- * @param eventName is the NSString to sent event with deviceId.
- * @param data is the NSDictionary you want to sent out.
- * @author AdpDigital co.
- *
- */
-- (BOOL)publishEvent:(NSString*)eventName data:(NSDictionary*)data;
-- (BOOL)publishEvent:(NSString*)eventName data:(NSDictionary*)data live:(BOOL)live;
-- (BOOL)publishEvent:(NSString*)eventName data:(NSDictionary*)data stateful:(BOOL)stateful;
-- (BOOL)publishEvent:(NSString*)eventName data:(NSDictionary*)data live:(BOOL)live stateful:(BOOL)stateful;
-
-- (void)enableEventDelivery:(NSString*)eventName;
-- (void)enableEventDelivery:(NSString*)eventName live:(BOOL)live;
-- (void)enableEventDelivery:(NSString*)eventName forPublic:(BOOL)forPublic live:(BOOL)live;
-
 
 /*!
  * @description Mark a message as read

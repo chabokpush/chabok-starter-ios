@@ -168,6 +168,9 @@ typedef enum {
  */
 @property (nonatomic) locationAutorizationEnumType locationAutorization;
 
+typedef NSDictionary *_Nullable(^customizeGeoDataCompletion)(CLLocation * _Nullable location);
+
+@property (nonatomic, copy) customizeGeoDataCompletion _Nullable customizeGeoData;
 /**
  * Singletone of coreGeoLocation
  */

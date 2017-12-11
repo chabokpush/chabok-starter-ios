@@ -1,11 +1,11 @@
 PODS:
-  - ChabokPush (1.13.9)
+  - ChabokPush (1.14.0)
 
 DEPENDENCIES:
   - ChabokPush
 
 SPEC CHECKSUMS:
-  ChabokPush: c81b053cf8485715fb8d36ac0620db40fdf444c8
+  ChabokPush: 1651236acbb929b6d562ddffdba47a6342704d52
 
 PODFILE CHECKSUM: 85f827500f2ef3d5493779918949e06430b66ff7
 

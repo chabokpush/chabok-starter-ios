@@ -14,7 +14,8 @@
 @property (nonatomic, readonly) NSString *id;
 @property (nonatomic, readonly) NSString *messageBody;
 @property (nonatomic, readonly) NSDictionary *data;
-@property (nonatomic, readonly) NSString *topicName;
+@property (nonatomic, readonly) NSString *channel;
+@property (nonatomic, readonly) NSString *userId;
 @property (nonatomic, readonly) NSDate *serverTime;
 @property (nonatomic, readonly) NSDate *expireTime;
 @property (nonatomic, readonly) NSDate *receivedTime;
@@ -28,12 +29,15 @@
 @property (nonatomic, readwrite) NSString *alertText;
 
 - (instancetype)initWithData:(NSData *)data channel:(NSString *)channel;
+- (instancetype)initWithData:(NSData *)data toUserId:(NSString *)userId channel:(NSString *)channel;
 
+- (instancetype)initWithJson:(NSDictionary *)json toUserId:(NSString *)userId channel:(NSString *)channel;
 - (instancetype)initWithJson:(NSDictionary *)json channel:(NSString *)channel;
 
 - (instancetype)initWithMessage:(NSString *)content channel:(NSString *)channel;
-
+- (instancetype)initWithMessage:(NSString *)content toUserId:(NSString *)userId channel:(NSString *) channel;
 - (instancetype)initWithMessage:(NSString *)content withData:(NSDictionary *)data channel:(NSString *)channel;
+- (instancetype)initWithMessage:(NSString *)content withData:(NSDictionary *)data toUserId:(NSString *)userId channel:(NSString *)channel;
 
 - (NSDictionary *)toDict;
 
