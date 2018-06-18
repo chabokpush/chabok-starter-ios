@@ -8,19 +8,49 @@
 
 /* Begin PBXBuildFile section */
 		3554277F8F67092E7582AE30 /* Pods_ChabokTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C4547B2C17DE5D38160534 /* Pods_ChabokTest.framework */; };
+		3F2821D5F9B5A9664885273F /* Pods_NotificationService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16451BC15CC21FB8BB29D34E /* Pods_NotificationService.framework */; };
 		C55785D61FA9B75D00930488 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55785D51FA9B75D00930488 /* RegisterViewController.swift */; };
 		C5A18E411FA89B1F005BDDF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A18E401FA89B1F005BDDF6 /* AppDelegate.swift */; };
 		C5A18E431FA89B1F005BDDF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A18E421FA89B1F005BDDF6 /* ViewController.swift */; };
 		C5A18E461FA89B1F005BDDF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A18E441FA89B1F005BDDF6 /* Main.storyboard */; };
 		C5A18E481FA89B1F005BDDF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5A18E471FA89B1F005BDDF6 /* Assets.xcassets */; };
 		C5A18E4B1FA89B1F005BDDF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A18E491FA89B1F005BDDF6 /* LaunchScreen.storyboard */; };
+		E625F8E120D7EF6B00C56408 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = E625F8E020D7EF6B00C56408 /* NotificationService.m */; };
+		E625F8E520D7EF6B00C56408 /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E625F8DD20D7EF6B00C56408 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E625F8E320D7EF6B00C56408 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5A18E351FA89B1F005BDDF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E625F8DC20D7EF6B00C56408;
+			remoteInfo = NotificationService;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E625F8E920D7EF6C00C56408 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E625F8E520D7EF6B00C56408 /* NotificationService.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0934E47427E2F366CD6763B7 /* Pods_ChabokTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChabokTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		16451BC15CC21FB8BB29D34E /* Pods_NotificationService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotificationService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47C4547B2C17DE5D38160534 /* Pods_ChabokTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChabokTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A832EDEF4A99C6AFA88735 /* Pods_ChabokTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChabokTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97AADE9FC6CD9250D87FC967 /* Pods-NotificationService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationService.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NotificationService/Pods-NotificationService.debug.xcconfig"; sourceTree = "<group>"; };
 		A08990CB9FA2C0C1A3A57EB0 /* Pods-ChabokTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChabokTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChabokTest/Pods-ChabokTest.release.xcconfig"; sourceTree = "<group>"; };
+		B6BA4BFE9D22CF8E23FD71EF /* Pods-NotificationService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationService.release.xcconfig"; path = "Pods/Target Support Files/Pods-NotificationService/Pods-NotificationService.release.xcconfig"; sourceTree = "<group>"; };
 		C19A004CD4BDDEA260D128C9 /* Pods-ChabokTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChabokTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChabokTest/Pods-ChabokTest.debug.xcconfig"; sourceTree = "<group>"; };
 		C55785D51FA9B75D00930488 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		C5A18E3D1FA89B1F005BDDF6 /* ChabokTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChabokTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +65,10 @@
 		C5A18E601FA89B1F005BDDF6 /* ChabokTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChabokTestUITests.swift; sourceTree = "<group>"; };
 		C5A18E621FA89B1F005BDDF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5A18E6E1FA8A45B005BDDF6 /* ChabokTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChabokTest.entitlements; sourceTree = "<group>"; };
+		E625F8DD20D7EF6B00C56408 /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E625F8DF20D7EF6B00C56408 /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
+		E625F8E020D7EF6B00C56408 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
+		E625F8E220D7EF6B00C56408 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +77,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3554277F8F67092E7582AE30 /* Pods_ChabokTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E625F8DA20D7EF6B00C56408 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F2821D5F9B5A9664885273F /* Pods_NotificationService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +97,7 @@
 				47C4547B2C17DE5D38160534 /* Pods_ChabokTest.framework */,
 				0934E47427E2F366CD6763B7 /* Pods_ChabokTestTests.framework */,
 				77A832EDEF4A99C6AFA88735 /* Pods_ChabokTestUITests.framework */,
+				16451BC15CC21FB8BB29D34E /* Pods_NotificationService.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -65,6 +108,7 @@
 				C5A18E3F1FA89B1F005BDDF6 /* ChabokTest */,
 				C5A18E541FA89B1F005BDDF6 /* ChabokTestTests */,
 				C5A18E5F1FA89B1F005BDDF6 /* ChabokTestUITests */,
+				E625F8DE20D7EF6B00C56408 /* NotificationService */,
 				C5A18E3E1FA89B1F005BDDF6 /* Products */,
 				E00EDE23FAF6D4AEE7C2425F /* Pods */,
 				BDEF68756B18E182E96749CD /* Frameworks */,
@@ -75,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				C5A18E3D1FA89B1F005BDDF6 /* ChabokTest.app */,
+				E625F8DD20D7EF6B00C56408 /* NotificationService.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,8 +162,20 @@
 			children = (
 				C19A004CD4BDDEA260D128C9 /* Pods-ChabokTest.debug.xcconfig */,
 				A08990CB9FA2C0C1A3A57EB0 /* Pods-ChabokTest.release.xcconfig */,
+				97AADE9FC6CD9250D87FC967 /* Pods-NotificationService.debug.xcconfig */,
+				B6BA4BFE9D22CF8E23FD71EF /* Pods-NotificationService.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E625F8DE20D7EF6B00C56408 /* NotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				E625F8DF20D7EF6B00C56408 /* NotificationService.h */,
+				E625F8E020D7EF6B00C56408 /* NotificationService.m */,
+				E625F8E220D7EF6B00C56408 /* Info.plist */,
+			);
+			path = NotificationService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,17 +189,35 @@
 				C5A18E391FA89B1F005BDDF6 /* Sources */,
 				C5A18E3A1FA89B1F005BDDF6 /* Frameworks */,
 				C5A18E3B1FA89B1F005BDDF6 /* Resources */,
-				9401222787AB53A327479C07 /* [CP] Embed Pods Frameworks */,
-				53A50347A354484DFA74BD88 /* [CP] Copy Pods Resources */,
+				E625F8E920D7EF6C00C56408 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E625F8E420D7EF6B00C56408 /* PBXTargetDependency */,
 			);
 			name = ChabokTest;
 			productName = ChabokTest;
 			productReference = C5A18E3D1FA89B1F005BDDF6 /* ChabokTest.app */;
 			productType = "com.apple.product-type.application";
+		};
+		E625F8DC20D7EF6B00C56408 /* NotificationService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E625F8E820D7EF6C00C56408 /* Build configuration list for PBXNativeTarget "NotificationService" */;
+			buildPhases = (
+				42D23E34378A3973BAF20CE4 /* [CP] Check Pods Manifest.lock */,
+				E625F8D920D7EF6B00C56408 /* Sources */,
+				E625F8DA20D7EF6B00C56408 /* Frameworks */,
+				E625F8DB20D7EF6B00C56408 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotificationService;
+			productName = NotificationService;
+			productReference = E625F8DD20D7EF6B00C56408 /* NotificationService.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -166,6 +241,10 @@
 							};
 						};
 					};
+					E625F8DC20D7EF6B00C56408 = {
+						CreatedOnToolsVersion = 9.4;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = C5A18E381FA89B1F005BDDF6 /* Build configuration list for PBXProject "ChabokTest" */;
@@ -182,6 +261,7 @@
 			projectRoot = "";
 			targets = (
 				C5A18E3C1FA89B1F005BDDF6 /* ChabokTest */,
+				E625F8DC20D7EF6B00C56408 /* NotificationService */,
 			);
 		};
 /* End PBXProject section */
@@ -197,37 +277,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E625F8DB20D7EF6B00C56408 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		53A50347A354484DFA74BD88 /* [CP] Copy Pods Resources */ = {
+		42D23E34378A3973BAF20CE4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NotificationService-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChabokTest/Pods-ChabokTest-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9401222787AB53A327479C07 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChabokTest/Pods-ChabokTest-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DEA099A561318C02400A4CE2 /* [CP] Check Pods Manifest.lock */ = {
@@ -261,7 +336,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E625F8D920D7EF6B00C56408 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E625F8E120D7EF6B00C56408 /* NotificationService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E625F8E420D7EF6B00C56408 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E625F8DC20D7EF6B00C56408 /* NotificationService */;
+			targetProxy = E625F8E320D7EF6B00C56408 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C5A18E441FA89B1F005BDDF6 /* Main.storyboard */ = {
@@ -426,6 +517,44 @@
 			};
 			name = Release;
 		};
+		E625F8E620D7EF6B00C56408 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97AADE9FC6CD9250D87FC967 /* Pods-NotificationService.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 99XQ6TEKDW;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adpdigital.Chabok.NotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E625F8E720D7EF6B00C56408 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6BA4BFE9D22CF8E23FD71EF /* Pods-NotificationService.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 99XQ6TEKDW;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adpdigital.Chabok.NotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -443,6 +572,15 @@
 			buildConfigurations = (
 				C5A18E661FA89B1F005BDDF6 /* Debug */,
 				C5A18E671FA89B1F005BDDF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E625F8E820D7EF6C00C56408 /* Build configuration list for PBXNativeTarget "NotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E625F8E620D7EF6B00C56408 /* Debug */,
+				E625F8E720D7EF6B00C56408 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

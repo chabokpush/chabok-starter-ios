@@ -2,7 +2,7 @@
 //  PushClientManager.h
 //  AdpPushClient
 //
-//  Created by Farshad Mousalou on 6/14/15.
+//  Created by Chabok Realtime Solution on 6/14/15.
 
 //  Copyright (c) 2015 Behrad Zari. All rights reserved.
 //  Copyright (c) 2015 Farshad Mousalou. All rights reserved.
@@ -126,7 +126,11 @@ extern NSString *const kPushClientDidFailInVerifyUserCodeNotification;
 /** push client error domain */
 extern NSString *const kPushClientErrorDomain;
 
+/* ChabokPush detect app was new installed */
+extern NSString *const kPushClientDetectAppNewInstall;
 
+/* ChabokPush detect app was Launched */
+extern NSString *const kPushClientDetectAppWasLaunched;
 
 
 /** Push Client Manager delegate gives your application control over the
@@ -170,6 +174,9 @@ extern NSString *const kPushClientErrorDomain;
 - (void)pushClientManagerDidFailInUnsubscribe:(NSError *) error;
 
 - (void)pushClientManagerDidFailInPublish:(NSError *) error;
+
+-(void) userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response
+         withCompletionHandler:(void (^)(void))completionHandler;
 
 @end
 
@@ -349,6 +356,11 @@ NS_CLASS_AVAILABLE_IOS(7_0)
  */
 @property (nonatomic, weak) id<PushClientManagerDelegate> delegate;
 
+/*!
+ * @description enable to show SDK logs.
+ * Note: Please, Just turn it on when using in debugging time
+ */
+@property (nonatomic) BOOL enableLog;
 
 /*!
  * @description addDelegate method purpose for multi delegation and callback support,
@@ -422,16 +434,6 @@ NS_CLASS_AVAILABLE_IOS(7_0)
 - (BOOL)registerUser:(NSString *)userId
             channels:(NSArray *)channels
  registrationHandler:(PushClientRegistrationHandlerBlock)registrationBlock;
-
-/*!
- * @description register new userId in server
- * @param userId value of new username or userphone must be not nil
- * @return boolean value for success registration validation and process or not
- * if methods return no check failureError or manager callBack registration fail
- * in -pushClientManagerDidFailRegisterUser:error or registrationBlock property
- */
-- (BOOL)registerAgainWithUserId:(NSString *)userId;
-- (BOOL)registerAgainWithUserId:(NSString *)userId channels:(NSArray *)channels;
 
 - (void)unregisterUser;
 
@@ -863,6 +865,9 @@ NS_CLASS_AVAILABLE_IOS(7_0)
  */
 - (void)applicationCrashedWithUserInfo:(NSDictionary *)userInfo saveOnDisk:(BOOL)saveOnDisk;
 
+#pragma mark - NotificationExtensionService methods
 
+// Call this method in your app Notification Service Extension
+- (void)didReceiveNotificationRequest:(UNNotificationRequest *)request withContentHandler:(void (^)(UNNotificationContent * _Nonnull))contentHandler;
 
 @end
