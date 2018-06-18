@@ -1,10 +1,12 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '9.0'
+
+use_frameworks!
 
 target 'ChabokTest' do
-
-    use_frameworks!
-
     pod 'ChabokPush'
+end
 
+target 'NotificationService' do
+    pod 'ChabokPush'
 end

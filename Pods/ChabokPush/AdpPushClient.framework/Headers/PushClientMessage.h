@@ -13,6 +13,7 @@
 
 @property (nonatomic, readonly) NSString *id;
 @property (nonatomic, readonly) NSString *messageBody;
+@property (nonatomic, readonly) NSDictionary *notification;
 @property (nonatomic, readonly) NSDictionary *data;
 @property (nonatomic, readonly) NSString *channel;
 @property (nonatomic, readonly) NSString *userId;
