@@ -3,10 +3,11 @@
 //  NotificationService
 //
 //  Created by Hussein Habibi Juybari on 6/18/18.
-//  Copyright © 2018 Parvin Mehrabani. All rights reserved.
+//  Copyright © 2018 Chabok Realtime Solution. All rights reserved.
 //
 
 #import "NotificationService.h"
+#import <AdpPushClient/AdpPushClient.h>
 
 @interface NotificationService ()
 
@@ -21,15 +22,11 @@
     self.contentHandler = contentHandler;
     self.bestAttemptContent = [request.content mutableCopy];
     
-    // Modify the notification content here...
-    self.bestAttemptContent.title = [NSString stringWithFormat:@"%@ [modified]", self.bestAttemptContent.title];
-    
-    self.contentHandler(self.bestAttemptContent);
+    //ChabokPush download media
+    [PushClientManager.defaultManager didReceiveNotificationRequest:request withContentHandler:contentHandler];
 }
 
 - (void)serviceExtensionTimeWillExpire {
-    // Called just before the extension will be terminated by the system.
-    // Use this as an opportunity to deliver your "best attempt" at modified content, otherwise the original push payload will be used.
     self.contentHandler(self.bestAttemptContent);
 }
 
