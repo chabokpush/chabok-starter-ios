@@ -32,8 +32,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate , PushClientManagerDelegat
         }
         
         if let userId = self.manager?.userId {
-            if !(self.manager?.registerUser(userId))! {
-                print("Error : \(String(describing: self.manager?.failureError))")
+            self.manager?.registerUser(userId) { (isRegistered, userId, error) in
+                if(isRegistered && error == nil){
+                    print("Registered : \(userId) with installationId : \(self.manager?.getInstallationId())")
+                } else {
+                    print("Not registered, Error : \(error)")
+                }
             }
         }
         return true
