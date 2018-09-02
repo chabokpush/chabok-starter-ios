@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate , PushClientManagerDelegat
 
         manager = PushClientManager.default()
         PushClientManager.setDevelopment(true)
+        manager?.enableLog = true
         manager?.registerApplication("chabok-starter", apiKey: "da5b6aeabee9e5fca9536ca1ecb121775868b3b0", userName: "chabok-starter", password: "chabok-starter")
         manager?.addDelegate(self)
         
@@ -31,8 +32,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate , PushClientManagerDelegat
         }
         
         if let userId = self.manager?.userId {
-            if !(self.manager?.registerUser(userId))! {
-                print("Error : \(String(describing: self.manager?.failureError))")
+            self.manager?.registerUser(userId) { (isRegistered, userId, error) in
+                if(isRegistered && error == nil){
+                    print("Registered : \(userId) with installationId : \(self.manager?.getInstallationId())")
+                } else {
+                    print("Not registered, Error : \(error)")
+                }
             }
         }
         return true

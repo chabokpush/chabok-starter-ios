@@ -25,7 +25,13 @@ class RegisterViewController: UIViewController {
         self.manager = PushClientManager.default()
 
         let UserId: String = UserIdTextField.text!
-        let registerUser = self.manager.registerUser(UserId)
+        let registerUser = self.manager.registerUser(UserId) { (isRegistered, userId, error) in
+            if(isRegistered && error == nil){
+                 print("Registered : \(userId) with installationId : \(self.manager.getInstallationId())")
+            } else {
+                print("Not registered, Error : \(error)")
+            }
+        }
         
         if !registerUser {
             print("Error : \(self.manager.failureError)")
