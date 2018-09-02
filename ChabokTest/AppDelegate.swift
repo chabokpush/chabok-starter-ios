@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate , PushClientManagerDelegat
 
         manager = PushClientManager.default()
         PushClientManager.setDevelopment(true)
+        manager?.enableLog = true
         manager?.registerApplication("chabok-starter", apiKey: "da5b6aeabee9e5fca9536ca1ecb121775868b3b0", userName: "chabok-starter", password: "chabok-starter")
         manager?.addDelegate(self)
         
