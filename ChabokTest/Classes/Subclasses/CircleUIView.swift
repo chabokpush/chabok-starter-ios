@@ -3,7 +3,7 @@
 //  ChabokTest
 //
 //  Created by Hussein Habibi Juybari on 9/25/18.
-//  Copyright © 2018 Parvin Mehrabani. All rights reserved.
+//  Copyright © 2018 Chabok Realtime Solutions. All rights reserved.
 //
 
 import UIKit

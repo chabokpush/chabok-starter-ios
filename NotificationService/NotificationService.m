@@ -3,7 +3,7 @@
 //  NotificationService
 //
 //  Created by Hussein Habibi Juybari on 6/18/18.
-//  Copyright © 2018 Chabok Realtime Solution. All rights reserved.
+//  Copyright © 2018 Chabok Realtime Solutions. All rights reserved.
 //
 
 #import "NotificationService.h"
