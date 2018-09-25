@@ -32,14 +32,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate , PushClientManagerDelegat
         }
         
         if let userId = self.manager?.userId {
-            self.manager?.registerUser(userId) { (isRegistered, userId, error) in
-                if(isRegistered && error == nil){
-                    print("Registered : \(userId) with installationId : \(self.manager?.getInstallationId())")
-                } else {
-                    print("Not registered, Error : \(error)")
-                }
-            }
+            self.manager?.registerUser(userId)
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let starterVC = storyboard.instantiateViewController(withIdentifier: "loginUIVCID")
+            self.window?.rootViewController = starterVC
         }
+        
         return true
     }
     //MARK : Notification AppDelegation
