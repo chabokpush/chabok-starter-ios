@@ -1,3 +1,0 @@
-# this requires a Certificates.cer & Certificates.p12 exported from keychain
-openssl x509 -in Certificates.cer -inform der -out pushCert.pem
-openssl pkcs12 -nocerts -out pushKey.pem -in Certificates.p12 -nodes

@@ -1,0 +1,12 @@
+
+Pods/
+
+Podfile\.lock
+
+ChabokTest\.xcodeproj/xcuserdata/husseinhj\.xcuserdatad/xcschemes/
+
+ChabokTest\.xcworkspace/xcuserdata/husseinhj\.xcuserdatad/xcdebugger/
+
+ChabokTest\.xcworkspace/xcuserdata/
+
+\.DS_Store
