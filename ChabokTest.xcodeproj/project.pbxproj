@@ -17,6 +17,9 @@
 		C5A18E4B1FA89B1F005BDDF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A18E491FA89B1F005BDDF6 /* LaunchScreen.storyboard */; };
 		E625F8E120D7EF6B00C56408 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = E625F8E020D7EF6B00C56408 /* NotificationService.m */; };
 		E625F8E520D7EF6B00C56408 /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E625F8DD20D7EF6B00C56408 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E63177A5215A34E4009CB050 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63177A4215A34E4009CB050 /* UIViewController+Extension.swift */; };
+		E63177A8215A6698009CB050 /* StarterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63177A7215A6698009CB050 /* StarterViewController.swift */; };
+		E63177AF215A674E009CB050 /* CircleUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63177AE215A674E009CB050 /* CircleUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		E625F8DF20D7EF6B00C56408 /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
 		E625F8E020D7EF6B00C56408 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
 		E625F8E220D7EF6B00C56408 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E63177A4215A34E4009CB050 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		E63177A7215A6698009CB050 /* StarterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterViewController.swift; sourceTree = "<group>"; };
+		E63177AE215A674E009CB050 /* CircleUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,10 +133,10 @@
 		C5A18E3F1FA89B1F005BDDF6 /* ChabokTest */ = {
 			isa = PBXGroup;
 			children = (
+				E63177A6215A6670009CB050 /* UIViewControllers */,
+				E63177A2215A3482009CB050 /* Classes */,
 				C5A18E6E1FA8A45B005BDDF6 /* ChabokTest.entitlements */,
-				C55785D51FA9B75D00930488 /* RegisterViewController.swift */,
 				C5A18E401FA89B1F005BDDF6 /* AppDelegate.swift */,
-				C5A18E421FA89B1F005BDDF6 /* ViewController.swift */,
 				C5A18E441FA89B1F005BDDF6 /* Main.storyboard */,
 				C5A18E471FA89B1F005BDDF6 /* Assets.xcassets */,
 				C5A18E491FA89B1F005BDDF6 /* LaunchScreen.storyboard */,
@@ -176,6 +182,41 @@
 				E625F8E220D7EF6B00C56408 /* Info.plist */,
 			);
 			path = NotificationService;
+			sourceTree = "<group>";
+		};
+		E63177A2215A3482009CB050 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E63177A9215A66B3009CB050 /* Subclasses */,
+				E63177A3215A348E009CB050 /* Extension */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E63177A3215A348E009CB050 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E63177A4215A34E4009CB050 /* UIViewController+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E63177A6215A6670009CB050 /* UIViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C55785D51FA9B75D00930488 /* RegisterViewController.swift */,
+				C5A18E421FA89B1F005BDDF6 /* ViewController.swift */,
+				E63177A7215A6698009CB050 /* StarterViewController.swift */,
+			);
+			path = UIViewControllers;
+			sourceTree = "<group>";
+		};
+		E63177A9215A66B3009CB050 /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				E63177AE215A674E009CB050 /* CircleUIView.swift */,
+			);
+			path = Subclasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,7 +373,10 @@
 			files = (
 				C55785D61FA9B75D00930488 /* RegisterViewController.swift in Sources */,
 				C5A18E431FA89B1F005BDDF6 /* ViewController.swift in Sources */,
+				E63177AF215A674E009CB050 /* CircleUIView.swift in Sources */,
 				C5A18E411FA89B1F005BDDF6 /* AppDelegate.swift in Sources */,
+				E63177A8215A6698009CB050 /* StarterViewController.swift in Sources */,
+				E63177A5215A34E4009CB050 /* UIViewController+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
