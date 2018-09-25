@@ -82,11 +82,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate , PushClientManagerDelegat
         self.manager?.application(application, didReceive: notification)
     }
     
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        print("‌User was tap on notification or click on action \(response.actionIdentifier)")
         
-        // Hook and Handle New Remote Notification, must be use for remote payloads
-        manager?.application(application, didReceiveRemoteNotification: userInfo, fetchCompletionHandler: completionHandler)
-        
+        completionHandler()
     }
     
     func pushClientManagerDidChangedServerConnectionState (){
