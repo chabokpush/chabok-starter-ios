@@ -6,9 +6,15 @@ These instructions will get you a copy of the project up and running on your loc
 
 `git clone https://github.com/chabokpush/chabok-starter-ios.git`
 
-2. open project in your idea and sync it, then build the app to your device or simulator.
+2. Open Terminal app and install the ChabokPush cocoapoad:
 
-3. You can login with [Test environment](https://sandbox.push.adpdigital.com/login) to see the starter app info in the panel. 
+```ruby
+pod install
+```
+
+3. open project in your idea and sync it, then build the app to your device or simulator.
+
+4. You can login with [Test environment](https://sandbox.push.adpdigital.com/login) to see the starter app info in the panel. 
 > Please use the following account
 >
 > **Username** : `starter` 
