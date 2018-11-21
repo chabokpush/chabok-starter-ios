@@ -15,8 +15,9 @@ pod install
 3. open project in your idea and sync it, then build the app to your device or simulator.
 
 4. You can login with [Test environment](https://sandbox.push.adpdigital.com/login) to see the starter app info in the panel. 
-> Please use the following account
->
+
+Please use the following account: 
+
 > **Username** : `starter` 
 >
 > **Password** : `starter`
