@@ -29,4 +29,4 @@ for more information about this app please visit our [website](http://chabokpush
 
 ## Download and Install
 
-<img src="https://github.com/chabokpush/chabok-starter-ios/raw/master/Build/chabok-starter.qr.png" width="150px" height="150px"/>
+<img src="https://github.com/chabokpush/chabok-starter-ios/raw/master/Build/chabok-starter.qr2.png" width="150px" height="150px"/>
