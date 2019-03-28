@@ -34,9 +34,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate , PushClientManagerDelegat
         if let userId = self.manager?.userId {
             self.manager?.registerUser(userId)
         } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let starterVC = storyboard.instantiateViewController(withIdentifier: "loginUIVCID")
-            self.window?.rootViewController = starterVC
+            
+            self.manager?.registerAsGuest()
+            
+            // Got to login page, verfiy user and register user with UserId.
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let starterVC = storyboard.instantiateViewController(withIdentifier: "loginUIVCID")
+//            self.window?.rootViewController = starterVC
         }
         
         return true
