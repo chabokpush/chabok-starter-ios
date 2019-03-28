@@ -27,6 +27,6 @@ for more information about this app please visit our [website](http://chabokpush
 ## Screenshot : 
 <img src="https://github.com/chabokpush/chabok-starter-ios/raw/master/starter.png" width="270px" height="470"/>
 
-## Download IPA
+## Download and Install
 
 <img src="https://github.com/chabokpush/chabok-starter-ios/raw/master/Build/chabok-starter.qr.png" width="150px" height="150px"/>
