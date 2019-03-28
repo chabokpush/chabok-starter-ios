@@ -93,7 +93,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate , PushClientManagerDelegat
     }
     
     func pushClientManagerDidChangedServerConnectionState (){
-        let connectionState = self.manager?.connectionState as! PushClientServerConnectionState
+        let connectionState : PushClientServerConnectionState = (self.manager?.connectionState)!
         
         switch (connectionState) {
         case .connectingStartState:
