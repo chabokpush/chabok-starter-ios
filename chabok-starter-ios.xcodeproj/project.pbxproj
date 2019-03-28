@@ -268,7 +268,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
-				ORGANIZATIONNAME = "Parvin Mehrabani";
+				ORGANIZATIONNAME = "Chabok Realtime Solutions";
 				TargetAttributes = {
 					C5A18E3C1FA89B1F005BDDF6 = {
 						CreatedOnToolsVersion = 9.0.1;

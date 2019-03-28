@@ -3,7 +3,7 @@ platform :ios, '9.0'
 
 use_frameworks!
 
-target 'ChabokTest' do
+target 'chabok-starter-ios' do
     pod 'ChabokPush'
 end
 
