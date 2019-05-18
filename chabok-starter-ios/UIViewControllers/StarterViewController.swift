@@ -167,6 +167,13 @@ class StarterViewController: UIViewController, PushClientManagerDelegate {
         self.manager?.track("Comment", data: ["postId":543214])
     }
     
+    @IBAction func setUserInfoButtonTapped(_ sender: Any) {
+        self.manager?.userInfo = ["firstName": "Behrad",
+                                  "lastName" : "Zari",
+                                  "age"      : 35,
+                                  "gender"   : "Male"]
+    }
+    
     // MARK: - Chabok delegate methods
     
     func pushClientManagerDidChangedServerConnectionState() {

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NDq-Mi-2mZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NDq-Mi-2mZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Login-->
         <scene sceneID="iCV-aT-LOC">
             <objects>
-                <viewController id="axn-Z5-VEB" customClass="RegisterViewController" customModule="ChabokTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="axn-Z5-VEB" customClass="RegisterViewController" customModule="chabok_starter_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZJl-fa-2zc"/>
                         <viewControllerLayoutGuide type="bottom" id="l3v-jh-HTA"/>
@@ -74,7 +74,7 @@
         <!--Starter View Controller-->
         <scene sceneID="et1-2E-6r6">
             <objects>
-                <viewController storyboardIdentifier="starterUIVCID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NDq-Mi-2mZ" customClass="StarterViewController" customModule="ChabokTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="starterUIVCID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NDq-Mi-2mZ" customClass="StarterViewController" customModule="chabok_starter_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XBI-bi-Kh5"/>
                         <viewControllerLayoutGuide type="bottom" id="BKs-or-wUq"/>
@@ -83,7 +83,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Arb-ia-EHm" userLabel="ConnectionStatusUIView" customClass="CircleUIView" customModule="ChabokTest" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Arb-ia-EHm" userLabel="ConnectionStatusUIView" customClass="CircleUIView" customModule="chabok_starter_ios" customModuleProvider="target">
                                 <rect key="frame" x="16" y="28" width="20" height="20"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -217,7 +217,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track user intractions :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWZ-ln-IQf" userLabel="TrackUserTitleUILabel">
-                                <rect key="frame" x="16" y="295" width="343" height="21"/>
+                                <rect key="frame" x="16" y="295" width="174.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="heJ-QB-qOs"/>
                                 </constraints>
@@ -308,6 +308,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mh-D5-NaV">
+                                <rect key="frame" x="198.5" y="290" width="168.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="mEv-Ry-BYQ"/>
+                                </constraints>
+                                <state key="normal" title="UserInfo"/>
+                                <connections>
+                                    <action selector="setUserInfoButtonTapped:" destination="NDq-Mi-2mZ" eventType="touchUpInside" id="AIt-Y1-rPH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -352,12 +362,13 @@
                             <constraint firstItem="Arb-ia-EHm" firstAttribute="top" secondItem="XBI-bi-Kh5" secondAttribute="bottom" constant="8" id="XmJ-YS-Y1K"/>
                             <constraint firstItem="3Dj-Je-dZn" firstAttribute="top" secondItem="lUK-eX-j8R" secondAttribute="bottom" constant="8" id="YLX-mZ-yoa"/>
                             <constraint firstItem="oC6-N8-XR3" firstAttribute="width" secondItem="ulU-vS-aLK" secondAttribute="width" id="Yeb-Lu-gXh"/>
-                            <constraint firstItem="tWZ-ln-IQf" firstAttribute="trailing" secondItem="7DU-tw-MzU" secondAttribute="trailingMargin" id="Zff-ge-wpl"/>
                             <constraint firstItem="7pt-J9-fQd" firstAttribute="top" secondItem="0Vp-eZ-8oW" secondAttribute="bottom" constant="10" id="ZoO-1s-R3N"/>
                             <constraint firstItem="tWZ-ln-IQf" firstAttribute="top" secondItem="nHv-oG-9cY" secondAttribute="bottom" constant="8" id="axo-ob-0Dx"/>
+                            <constraint firstItem="5Mh-D5-NaV" firstAttribute="top" secondItem="8Gr-Ar-R8i" secondAttribute="bottom" constant="3" id="boh-ki-0Mb"/>
                             <constraint firstItem="Ik9-VD-mU7" firstAttribute="leading" secondItem="0sg-Z6-flE" secondAttribute="trailing" constant="8" id="c8o-Ym-pfZ"/>
                             <constraint firstItem="8Gr-Ar-R8i" firstAttribute="top" secondItem="AOU-NR-KpT" secondAttribute="bottom" constant="10" id="cuV-5p-7WU"/>
                             <constraint firstAttribute="trailing" secondItem="PH0-Tr-rZn" secondAttribute="trailing" constant="16" id="fee-ZJ-U1d"/>
+                            <constraint firstAttribute="trailing" secondItem="5Mh-D5-NaV" secondAttribute="trailing" constant="8" id="gos-E6-Iqh"/>
                             <constraint firstItem="D50-tf-Bau" firstAttribute="width" secondItem="ulU-vS-aLK" secondAttribute="width" id="hC5-Wa-XPQ"/>
                             <constraint firstItem="ulU-vS-aLK" firstAttribute="top" secondItem="0sg-Z6-flE" secondAttribute="bottom" constant="11" id="hPe-1p-ZdG"/>
                             <constraint firstItem="Kei-FX-HF4" firstAttribute="top" secondItem="Ik9-VD-mU7" secondAttribute="bottom" constant="11" id="hWP-pj-6nT"/>
@@ -374,6 +385,7 @@
                             <constraint firstAttribute="trailing" secondItem="3Dj-Je-dZn" secondAttribute="trailing" constant="16" id="vOH-cT-Ggr"/>
                             <constraint firstItem="0Vp-eZ-8oW" firstAttribute="leading" secondItem="7DU-tw-MzU" secondAttribute="leadingMargin" id="wiX-3Q-iUC"/>
                             <constraint firstItem="nHv-oG-9cY" firstAttribute="top" secondItem="AOU-NR-KpT" secondAttribute="bottom" constant="10" id="wlR-XG-t5p"/>
+                            <constraint firstItem="5Mh-D5-NaV" firstAttribute="leading" secondItem="tWZ-ln-IQf" secondAttribute="trailing" constant="8" id="xBq-km-1qr"/>
                             <constraint firstItem="CMe-k1-is9" firstAttribute="top" secondItem="tWZ-ln-IQf" secondAttribute="bottom" constant="8" id="zMe-sS-4GZ"/>
                         </constraints>
                     </view>
@@ -412,7 +424,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="open" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="ChabokTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="open" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="chabok_starter_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="z5i-9j-5Ew"/>
                         <viewControllerLayoutGuide type="bottom" id="Pte-pm-Y9H"/>
