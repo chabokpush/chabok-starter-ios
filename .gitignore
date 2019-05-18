@@ -10,3 +10,9 @@ ChabokTest\.xcworkspace/xcuserdata/husseinhj\.xcuserdatad/xcdebugger/
 ChabokTest\.xcworkspace/xcuserdata/
 
 \.DS_Store
+
+chabok-starter-ios\.xcworkspace/xcshareddata/
+
+*.xcuserstate
+
+*.xcbkptlist
