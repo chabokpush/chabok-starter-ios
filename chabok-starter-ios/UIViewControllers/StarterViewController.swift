@@ -152,11 +152,11 @@ class StarterViewController: UIViewController, PushClientManagerDelegate {
     // MARK: - Track Section -- UIButton delegate methods
 
     @IBAction func addToCartButtonTapped(_ sender: Any) {
-        self.manager?.track("AddToCart", data: ["capId":12345])
+        self.manager?.track("AddToCart", data: ["value":50000])
     }
     
     @IBAction func purchaseButtonTapped(_ sender: Any) {
-        self.manager?.track("Purchase", data: ["capId":1234567])
+        self.manager?.trackPurchase("Purchase", chabokEvent: ChabokEvent.init(revenue: 2000, currency: "RIAL"))
     }
     
     @IBAction func likeButtonTapped(_ sender: Any) {
@@ -168,10 +168,18 @@ class StarterViewController: UIViewController, PushClientManagerDelegate {
     }
     
     @IBAction func setUserInfoButtonTapped(_ sender: Any) {
-        self.manager?.userInfo = ["firstName": "Behrad",
-                                  "lastName" : "Zari",
-                                  "age"      : 35,
-                                  "gender"   : "Male"]
+        
+        
+        
+        PushClientManager.default()?.registerUser("USER_ID", registrationHandler: { (register, userId, error) in
+            
+            if register {
+                PushClientManager.default()?.userAttributes = ["firstName": "Behrad",
+                                          "lastName" : "Zari",
+                                          "age"      : 35,
+                                          "gender"   : "Male"]
+            }
+        })
     }
     
     // MARK: - Chabok delegate methods

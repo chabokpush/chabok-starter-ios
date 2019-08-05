@@ -313,7 +313,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="mEv-Ry-BYQ"/>
                                 </constraints>
-                                <state key="normal" title="UserInfo"/>
+                                <state key="normal" title="UserAttributes"/>
                                 <connections>
                                     <action selector="setUserInfoButtonTapped:" destination="NDq-Mi-2mZ" eventType="touchUpInside" id="AIt-Y1-rPH"/>
                                 </connections>
