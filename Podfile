@@ -4,9 +4,9 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'chabok-starter-ios' do
-    pod 'ChabokPush', '~> 1.19.0'
+    pod 'ChabokPush', '~> 1.20.1'
 end
 
 target 'NotificationService' do
-    pod 'ChabokPush', '~> 1.19.0'
+    pod 'ChabokPush', '~> 1.20.1'
 end
